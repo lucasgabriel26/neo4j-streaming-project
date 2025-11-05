@@ -35,7 +35,7 @@ O modelo foi projetado para conter as seguintes entidades e conexões:
 
 ## 🗺️ Diagrama do Grafo
 
-![Modelo de Grafo](./diagrama?cache=2025-10-27)
+![Modelo de Grafo](https://github.com/lucasgabriel26/neo4j-streaming-project/blob/main/diagrama.png?cache=2025-10-27)
 
 > 💡 O diagrama foi criado para representar a estrutura do grafo no Neo4j, mostrando as entidades principais e suas conexões.
 
