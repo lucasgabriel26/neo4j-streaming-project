@@ -18,7 +18,7 @@ O modelo foi projetado para conter as seguintes entidades e conexões:
 ### **Entidades (Nós)**
 - 🧍 **User**
 - 🎬 **Movie**
-- 📺 **Series**
+- 📺 **Serie**
 - 🎭 **Actor**
 - 🎥 **Director**
 - 🏷️ **Genre**
@@ -35,7 +35,7 @@ O modelo foi projetado para conter as seguintes entidades e conexões:
 
 ## 🗺️ Diagrama do Grafo
 
-![Modelo de Grafo](link-da-imagem-do-diagrama)
+![Modelo de Grafo](./diagrama?cache=2025-10-27)
 
 > 💡 O diagrama foi criado para representar a estrutura do grafo no Neo4j, mostrando as entidades principais e suas conexões.
 
@@ -44,14 +44,14 @@ O modelo foi projetado para conter as seguintes entidades e conexões:
 ## ⚙️ Criação de Constraints
 
 ```cypher
-CREATE CONSTRAINT user_name IF NOT EXISTS
-FOR (u:User) REQUIRE u.name IS UNIQUE;
+CREATE CONSTRAINT user_id IF NOT EXISTS
+FOR (u:User) REQUIRE u.id IS UNIQUE;
 
 CREATE CONSTRAINT movie_title IF NOT EXISTS
 FOR (m:Movie) REQUIRE m.title IS UNIQUE;
 
-CREATE CONSTRAINT series_title IF NOT EXISTS
-FOR (s:Series) REQUIRE s.title IS UNIQUE;
+CREATE CONSTRAINT serie_title IF NOT EXISTS
+FOR (s:Serie) REQUIRE s.title IS UNIQUE;
 
 CREATE CONSTRAINT genre_name IF NOT EXISTS
 FOR (g:Genre) REQUIRE g.name IS UNIQUE;
