@@ -41,23 +41,29 @@ O modelo foi projetado para conter as seguintes entidades e conexões:
 
 ---
 
-## ⚙️ Criação de Constraints
+## 📜 Script Cypher
+O script completo está disponível no arquivo [`neo4j-streaming-project.cypher`](./neo4j-streaming-project.cypher).  
+Ele contém:
+- Criação de constraints  
+- Criação de nós (usuários, filmes, séries, gêneros, atores, diretores)  
+- Criação de relacionamentos (`ACTED_IN`, `DIRECTED`, `IN_GENRE`, `WATCHED`)
 
-```cypher
-CREATE CONSTRAINT user_id IF NOT EXISTS
-FOR (u:User) REQUIRE u.id IS UNIQUE;
+---
 
-CREATE CONSTRAINT movie_title IF NOT EXISTS
-FOR (m:Movie) REQUIRE m.title IS UNIQUE;
+## 🚀 Como Executar
+1. Crie uma instância gratuita do **Neo4j AuraDB** em [https://neo4j.com/cloud](https://neo4j.com/cloud)
+2. Acesse o **Neo4j Browser**
+3. Copie o conteúdo do arquivo `neo4j-streaming-project.cypher`
+4. Cole e execute no Browser (CTRL + Enter)
+5. Visualize o grafo com:
+   ```cypher
+   MATCH (n) RETURN n;
 
-CREATE CONSTRAINT serie_title IF NOT EXISTS
-FOR (s:Serie) REQUIRE s.title IS UNIQUE;
+---
 
-CREATE CONSTRAINT genre_name IF NOT EXISTS
-FOR (g:Genre) REQUIRE g.name IS UNIQUE;
+## 👨‍💻 Autor
 
-CREATE CONSTRAINT actor_name IF NOT EXISTS
-FOR (a:Actor) REQUIRE a.name IS UNIQUE;
-
-CREATE CONSTRAINT director_name IF NOT EXISTS
-FOR (d:Director) REQUIRE d.name IS UNIQUE;
+**Lucas Gabriel Pinto**  
+📍 Apodi, RN — Brasil  
+💼 [LinkedIn](https://www.linkedin.com/in/lucasgpin/)  
+📧 lucasgabriel.lg626@gmail.com
